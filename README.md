@@ -331,6 +331,13 @@ python -m claude_ads_core validate finding path/to/finding.json
 bash -n install.sh uninstall.sh
 ```
 
+Local hooks (checks only, nothing is rewritten): `pre-commit run --all-files`.
+Two hooks report findings that were already in the tree on 2026-11-22: ruff
+(five unused-import, unused-variable and lambda findings) and
+detect-private-key (the placeholder PEM block in
+`tests/scripts/test_url_utils.py`). CI scans each pull request for secrets with
+gitleaks; `.gitleaksignore` lists the reviewed test-fixture findings in history.
+
 
 ### Reference documents
 

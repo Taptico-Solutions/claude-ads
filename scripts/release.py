@@ -2112,6 +2112,7 @@ def verify_github_run(root: Path, run_id: str, commit_sha: str) -> dict[str, obj
         "Core tests (Python 3.12)",
         "Full test suite",
         "Reproducible package smoke test",
+        "Security (secret scan)",
         "validate",
     }
     for runner in ("ubuntu-latest", "macos-15", "macos-15-intel", "windows-latest"):

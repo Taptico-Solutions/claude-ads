@@ -1,0 +1,23 @@
+# Checks only, no auto-fix hooks. Install once with `pre-commit install`,
+# run everything with `pre-commit run --all-files`.
+# Never add a top-level `exclude:`: it would also hide files from the secret hooks.
+# Put excludes on the individual non-secret hooks instead.
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-merge-conflict
+      - id: check-added-large-files
+      - id: detect-private-key
+      - id: check-json
+      - id: check-yaml
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.21.2
+    hooks:
+      - id: gitleaks
+        always_run: true
+  # The repo has no ruff config, so this is ruff's default rule set, check only (no --fix).
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.8.6
+    hooks:
+      - id: ruff

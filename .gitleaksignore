@@ -1,0 +1,12 @@
+# Reviewed gitleaks baseline (RDY002, 2026-11-22). Each entry is a test fixture,
+# not a real credential: a synthetic account hash in a cockpit wire fixture and
+# fake key, token and Ed25519 test values in tests/scripts/test_url_utils.py.
+# Found by gitleaks 8.21.2 over the full history; new findings still fail CI.
+6e9f6768909a797f9e0dcdc4fb4dea25ce094ecc:tests/fixtures/cockpit/wire/snapshot.json:generic-api-key:4
+8ed6da17e39a978f56776df899a1680518c9a6a1:tests/scripts/test_url_utils.py:generic-api-key:90
+c29c7dbaf926978497f6697816ed359f8ee98549:tests/scripts/test_url_utils.py:generic-api-key:186
+c29c7dbaf926978497f6697816ed359f8ee98549:tests/scripts/test_url_utils.py:private-key:195
+eb89d6f0abf28cec7e78f4d4dc40c12adb9462e2:tests/scripts/test_url_utils.py:generic-api-key:101
+eb89d6f0abf28cec7e78f4d4dc40c12adb9462e2:tests/scripts/test_url_utils.py:generic-api-key:102
+eb89d6f0abf28cec7e78f4d4dc40c12adb9462e2:tests/scripts/test_url_utils.py:generic-api-key:103
+eb89d6f0abf28cec7e78f4d4dc40c12adb9462e2:tests/scripts/test_url_utils.py:generic-api-key:136
